@@ -1,30 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>My Favorite Bean: Edamame</title>
+  <title>Masukin Password</title>
   <style>
     body {
       font-family: sans-serif;
-      background: #f4f4f4;
-      padding: 40px;
-      text-align: center;
+      background-color: #fefae0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
     }
-    a {
-      display: block;
-      margin: 20px 0;
-      color: #2c3e50;
-      font-weight: bold;
+    input, button {
+      padding: 10px;
+      margin: 10px;
+      font-size: 16px;
     }
   </style>
 </head>
 <body>
-  <h1>My Favorite Bean: Edamame</h1>
-  <p>Here's a little corner of the internet where I poured my heart out.</p>
+  <h2> Hiii🫛 Masukkan password untuk baca suratnya 💌</h2>
+  <input type="password" id="password" placeholder="Masukkan password">
+  <button onclick="checkPassword()">Buka Surat</button>
+  <p id="error" style="color: red;"></p>
 
-  <a href="lembar1.pdf" target="_blank">Lembar 1 - Edamame?</a>
-  <a href="lembar2.pdf" target="_blank">Lembar 2 - Things i wish i could tell you</a>
-  <a href="lembar3.pdf" target="_blank">Lembar 3 - Xo, Delta</a>
-  <!-- Tambah terus sesuai jumlah lembar PDF -->
+  <script>
+    function checkPassword() {
+      const pass = document.getElementById("password").value;
+      if (pass === "favoritbean") { // Ganti dengan password kamu
+        window.location.href = "surat.html"; // Buka halaman surat
+      } else {
+        document.getElementById("error").innerText = "Password salah 😢";
+      }
+    }
+  </script>
 </body>
 </html>
