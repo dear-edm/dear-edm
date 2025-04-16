@@ -3,6 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Masukin Password</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6JY70L7MZK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6JY70L7MZK');
+  </script>
+  <!-- End Google Analytics -->
+
   <style>
     body {
       font-family: sans-serif;
@@ -29,8 +41,8 @@
   <script>
     function checkPassword() {
       const pass = document.getElementById("password").value;
-      if (pass === "051725") { // Ganti dengan password kamu
-        window.location.href = "surat.html"; // Buka halaman surat
+      if (pass === "051725") {
+        window.location.href = "surat.html";
       } else {
         document.getElementById("error").innerText = "Password salah 😢";
       }
